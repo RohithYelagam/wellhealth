@@ -9,7 +9,8 @@ export default function Home() {
     useEffect(() => {
         axios.get('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=cd4f72e2c6084071aab8911a8b2643a5').then((res)=>{
             setNews(res.data.articles);
-            console.log(res.data.articles[0].url);
+            console.log("response from home");
+            console.log(res.data);
         })
     }, [])
 
