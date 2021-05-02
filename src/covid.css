@@ -1,0 +1,84 @@
+.covid{
+    background-color: #161625;
+    width: 100%;
+    height: 800px;
+    color: rgb(192, 189, 189);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.confirmed{
+    color: #FF073A;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border: 0.5px #FF073A dashed;
+    border-radius: 4px;
+    padding-bottom: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 100px;
+}
+.confirmed:hover{
+    background-color: #4D1229;
+    cursor: pointer;
+    border: 1px #FF073A solid;
+}
+.active{
+    color:#0179F9;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border: 0.5px #0179F9 dashed;
+    border-radius: 4px;
+    padding-bottom: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 100px;
+}
+.active:hover{
+    background-color: #12284C;cursor: pointer;
+    border: 1px #0179F9 solid;
+}
+.recovered{
+    color: #28A745;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border: 0.5px #28A745 dashed;
+    border-radius: 4px;
+    padding-bottom: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 100px;
+}
+.recovered:hover{
+    border: 1px #28A745 solid;
+    background-color: #1A382D;cursor: pointer;
+}
+.deceased{
+    color: rgb(175, 175, 5);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border: 0.5px rgb(175, 175, 5) dashed;
+    border-radius: 4px;
+    padding-bottom: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 100px;
+}
+.deceased:hover{
+    border:  1px rgb(175, 175, 5) solid;
+    background-color: rgb(83, 83, 31);cursor: pointer;
+}
+.total_india{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
