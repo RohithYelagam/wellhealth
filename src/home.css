@@ -1,63 +1,62 @@
-.home{
-    display: flex;
-    flex-direction: column;
-    /* background-color: #161625; */
-    color:grey;
+.home {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #161625; */
+  color: grey;
 }
-.home_header{
-    display: flex;
-    justify-content: space-around;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    /* background-color: #131320; */
-    margin-bottom: 20px;
-    
-}
-
-.home_news{
-    display: flex;
-    flex-wrap: wrap;
-}
-.news{
-    display: flex;
-    justify-content: space-between;
-    max-width: 500px;
-    min-width: 500px;
-    margin: 20px;
-    /* background-color: rgb(119, 124, 123); */
-    border: 0.5px solid rgb(171, 209, 252);
-    border-radius: 3px;
-    padding: 5px;
-}
-.news:hover{
-    background-color: rgb(217, 233, 252);
-    color: black;
+.home_header {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  /* background-color: #131320; */
+  margin-bottom: 20px;
 }
 
-.photo{
-    margin: 5px;
+.home_news {
+  display: flex;
+  flex-wrap: wrap;
 }
-.photo:hover{
-    opacity: 0.8;
+.news {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  min-width: 500px;
+  margin: 20px;
+  /* background-color: rgb(119, 124, 123); */
+  border: 0.5px solid rgb(171, 209, 252);
+  border-radius: 3px;
+  padding: 5px;
 }
-.title > a{
-    font-size: large;
-    font-weight: bold;
-    color: grey;
-    text-decoration: none;
+.news:hover {
+  background-color: rgb(217, 233, 252);
+  color: black;
 }
-.title>a:hover{
-    color: rgb(35, 144, 247);
+
+.photo {
+  margin: 5px;
 }
-.author{
-    font-size:small;
-    opacity: 0.8;
+.photo:hover {
+  opacity: 0.8;
 }
-.news_text{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.title > a {
+  font-size: large;
+  font-weight: bold;
+  color: grey;
+  text-decoration: none;
 }
-.news_container:hover{
-    color: black;
+.title > a:hover {
+  color: rgb(35, 144, 247);
+}
+.author {
+  font-size: small;
+  opacity: 0.8;
+}
+.news_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.news_container:hover {
+  color: black;
 }
