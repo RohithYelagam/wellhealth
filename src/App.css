@@ -28,4 +28,6 @@
 .header_covid:hover{
   color: white;
 }
-
+.header_title{
+  font-size: larger;
+}

@@ -19,7 +19,7 @@ function App() {
               Home
             </Link>
             <Link to="/wellhealth/covid" className="header_covid">
-              Home
+              Covid
             </Link>
           </div>
         </div>
