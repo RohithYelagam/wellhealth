@@ -88,11 +88,12 @@
 }
 .graphs{
     min-width: 1000px;
-    min-height: 450px;
+    min-height: 415px;
     padding-left: 200px;
     padding-top: 10px;
     /* background-color: #FF073A; */
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
     /* align-items: center; */
     /* justify-content: space-around; */
 }
