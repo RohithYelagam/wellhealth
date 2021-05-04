@@ -81,7 +81,7 @@
 .total_india{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .drop_down{
     color: #FF073A;
@@ -96,4 +96,38 @@
     flex-direction: column;
     /* align-items: center; */
     /* justify-content: space-around; */
+}
+.covid_trends{
+    background-color: #12284C;
+    font-size: large;
+    padding: 5px;
+    border-radius: 3px;
+}
+.covid_trends:hover{
+    background-color: #07509A;
+    cursor: pointer;
+}
+.covid_title{
+    background-color: #12284C;
+    font-size: larger;
+    margin-top: 20px;
+    margin-bottom:30px ;
+    padding: 5px;
+    border-radius: 3px;
+}
+.covid_title:hover{
+    background-color: #07509A;
+    cursor: pointer;
+}
+.state{
+    background-color: #12284C;
+    font-size: larger;
+    margin-top: 20px;
+    margin-bottom:30px ;
+    padding: 5px;
+    border-radius: 3px;
+}
+.state:hover{
+    background-color: #07509A;
+    cursor: pointer;
 }

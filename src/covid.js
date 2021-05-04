@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import Chart from "react-google-charts";
 import axios from "axios";
 import "./covid.css";
+
+import Home from "./home";
+
 import {
   CountryDropdown,
   RegionDropdown,
@@ -68,10 +71,11 @@ export default function Covid() {
   return (
     <div className="covid">
       <div className="covid_title">
-        <h2>Coivd-19 India</h2>
+        Coivd-19 India
       </div>
 
       <div className="total_india">
+        
         <div className="confirmed">
           <h3>Confirmed</h3>
           <div className="c_cases">
@@ -98,6 +102,9 @@ export default function Covid() {
         </div>
       </div>
 
+      <div className="covid_trends">
+        Covid Trends
+      </div>
       <div className="graphs">
         {/* confirmed */}
       <Chart
@@ -192,7 +199,7 @@ export default function Covid() {
          title:"Recovered ",
          colors:['#28A745'],
          titleTextStyle:{
-          color:'#3366CC',
+          color:'#28A644',
           fontSize:16,
           bold:true,
          },
@@ -220,6 +227,9 @@ export default function Covid() {
 
 
 {/* //////////////////////////////////////////////////////////////////////////////// */}
+        <div className="state">
+          Statewise Information
+        </div>
       <div>
         <CountryDropdown
           className="drop_down"
@@ -259,7 +269,7 @@ export default function Covid() {
         </div>
       </div>
 
-      
+      <Home/>
     </div>
   );
 }

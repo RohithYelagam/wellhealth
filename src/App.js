@@ -14,7 +14,7 @@ function App() {
         <div className="header_title">WellHealth</div>
         <div className="header_nav">
           {/* <Link to="/wellhealth/" className="header_home">Home</Link> */}
-          <Link to="/wellhealth/" className="header_covid">covid</Link>
+          <Link to="/wellhealth/" className="header_covid">Home</Link>
         </div>
       </div>
         <Switch>
