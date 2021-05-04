@@ -3,11 +3,8 @@ import Chart from "react-google-charts";
 import axios from "axios";
 import "./covid.css";
 
-import Home from "./home";
-
 import {
   CountryDropdown,
-  RegionDropdown,
 } from "react-indian-state-region-selector";
 
 export default function Covid() {
@@ -21,6 +18,7 @@ export default function Covid() {
   const [rows, setRows] = useState([]);
   const [rows2, setRows2] = useState([]);
   const [rows3, setRows3] = useState([]);
+  // const rows=[],rows2=[],rows3=[];
 
   const selectCountry = (val) => {
     setCountry(val);
@@ -55,10 +53,11 @@ export default function Covid() {
             Number(x.totaldeceased),
         ]);
         rows3.push([p, Number(x.dailyrecovered)]);
-      });
-      console.log(rows2);
+        
     });
-  }, []);
+      // console.log(rows2);
+    });
+  },[]);
 
   const columns = [
     {

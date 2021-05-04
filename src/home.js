@@ -32,6 +32,7 @@ export default function Home() {
                         src={a.urlToImage}
                         width="160px"
                         height="100px"
+                        alt=""
                       ></img>
                     </a>
                   </div>

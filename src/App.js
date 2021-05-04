@@ -1,6 +1,6 @@
 import "./App.css";
 import logo from "./logo.png";
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Home from "./home";
 import Covid from "./covid";
@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <div className="header">
           <div className="header_logo">
-            <img src={logo} width="30px" height="30px"></img>
+            <img src={logo} alt="" width="30px" height="30px"></img>
           </div>
           <div className="header_title">WellHealth</div>
           <div className="header_nav">
