@@ -15,21 +15,21 @@ function App() {
           </div>
           <div className="header_title">WellHealth</div>
           <div className="header_nav">
-            <Link to="/wellhealth/" className="header_home">
+            {/* <Link to="/wellhealth/" className="header_home">
               Home
-            </Link>
-            <Link to="/wellhealth/covid" className="header_covid">
+            </Link> */}
+            <Link to="/wellhealth/" className="header_covid">
               Covid
             </Link>
           </div>
         </div>
         <Switch>
-          <Route path="/wellhealth/covid">
+          <Route exact path="/wellhealth/">
             <Covid />
           </Route>
-          <Route path="/wellhealth/">
+          {/* <Route exact path="/wellhealth/">
             <Home />
-          </Route>
+          </Route> */}
         </Switch>
       </div>
     </Router>
