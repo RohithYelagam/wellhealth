@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Chart from "react-google-charts";
 import axios from "axios";
-import "./covid.css";
+import "./css/covid.css";
 
 import {
   CountryDropdown,
 } from "react-indian-state-region-selector";
+
+
 
 export default function Covid() {
   const [a, setA] = useState();
@@ -27,16 +29,20 @@ export default function Covid() {
   };
 
   useEffect(() => {
-    axios.get("https://api.covid19india.org/data.json").then((res) => {
+    axios.get("https://data.covid19india.org/data.json").then((res) => {
       setA(res.data.statewise[0].active);
       setC(res.data.statewise[0].confirmed);
       setR(res.data.statewise[0].recovered);
       setD(res.data.statewise[0].deaths);
       setArr(res.data.cases_time_series);
+    }).catch((error) => {
+      console.log(error);
     });
-    axios.get("https://api.covid19india.org/data.json").then((res) => {
+    var r1=[],r2=[],r3=[];
+    axios.get("https://data.covid19india.org/data.json").then((res) => {
       setArr(res.data.statewise);
       var dd = "";
+      
       res.data.cases_time_series.map((x) => {
         dd = x.dateymd;
         var p = new Date();
@@ -45,18 +51,22 @@ export default function Covid() {
           Number(dd.substring(5, 7)) - 1,
           Number(dd.substring(8, 10))
         );
-        rows.push([p, Number(x.dailyconfirmed)]);
-        rows2.push([
+        r1.push([p, Number(x.dailyconfirmed)]);
+        r2.push([
           p,
           Number(x.totalconfirmed) -
             Number(x.totalrecovered) -
             Number(x.totaldeceased),
         ]);
-        rows3.push([p, Number(x.dailyrecovered)]);
-        
+        r3.push([p, Number(x.dailyrecovered)]);
+      });
+      setRows(r1);
+      setRows2(r2);
+      setRows3(r3);
+    }).catch((error) => {
+      console.log(error);
     });
-      // console.log(rows2);
-    });
+
   },[]);
 
   const columns = [
@@ -72,8 +82,8 @@ export default function Covid() {
 
   return (
     <div className="covid">
-      <div className="covid_title">Coivd-19 India</div>
 
+      <div className="covid_title">Coivd-19 India</div>
       <div className="total_india">
         <div className="confirmed">
           <h3>Confirmed</h3>
@@ -231,7 +241,7 @@ export default function Covid() {
         <CountryDropdown
           className="drop_down"
           value={country}
-          onChange={(val) => selectCountry(val)}
+          onChange={(val)=>selectCountry(val)}
         />
       </div>
 
@@ -266,7 +276,6 @@ export default function Covid() {
         </div>
       </div>
 
-      {/* <Home/> */}
     </div>
   );
 }

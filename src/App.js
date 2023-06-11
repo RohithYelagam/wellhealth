@@ -1,4 +1,4 @@
-import "./App.css";
+import "./css/App.css";
 import logo from "./logo.png";
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
@@ -15,21 +15,21 @@ function App() {
           </div>
           <div className="header_title">WellHealth</div>
           <div className="header_nav">
-            {/* <Link to="/wellhealth/" className="header_home">
+            <Link to="/" className="header_home">
               Home
-            </Link> */}
-            <Link to="/wellhealth/" className="header_covid">
+            </Link>
+            <Link to="/covid/" className="header_covid">
               Covid
             </Link>
           </div>
         </div>
         <Switch>
-          <Route exact path="/wellhealth/">
+          <Route exact path="/covid/">
             <Covid />
           </Route>
-          {/* <Route exact path="/wellhealth/">
+          <Route exact path="/">
             <Home />
-          </Route> */}
+          </Route>
         </Switch>
       </div>
     </Router>
