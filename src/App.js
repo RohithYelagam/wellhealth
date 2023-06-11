@@ -15,19 +15,19 @@ function App() {
           </div>
           <div className="header_title">WellHealth</div>
           <div className="header_nav">
-            <Link to="/" className="header_home">
+            <Link to="/wellhealth/" className="header_home">
               Home
             </Link>
-            <Link to="/covid/" className="header_covid">
+            <Link to="/wellhealth/covid/" className="header_covid">
               Covid
             </Link>
           </div>
         </div>
         <Switch>
-          <Route exact path="/covid/">
+          <Route exact path="/wellhealth/covid/">
             <Covid />
           </Route>
-          <Route exact path="/">
+          <Route exact path="/wellhealth/">
             <Home />
           </Route>
         </Switch>
